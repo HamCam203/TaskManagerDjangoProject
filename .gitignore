@@ -1,0 +1,35 @@
+# Environnement virtuel
+env/
+venv/
+ENV/
+*.venv/
+
+# Fichiers Python compilés
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Fichiers de log
+*.log
+
+# Fichiers de base de données
+*.sqlite3
+
+# Config utilisateur de l’IDE (ex: VSCode, PyCharm)
+.vscode/
+.idea/
+
+# Fichiers système
+.DS_Store
+Thumbs.db
+
+# Secrets ou clés
+*.env
+
+# Django static/media si générés automatiquement
+/staticfiles/
+/media/
+
+# Migrations (optionnel selon ton workflow)
+*/migrations/*.pyc
+*/migrations/__pycache__/
