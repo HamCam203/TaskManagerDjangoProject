@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'public.apps.PublicConfig',
     'corsheaders',
     'rest_framework',
+    'rest_framework.authtoken',  # For token authentication
     'task',
 ]
 
