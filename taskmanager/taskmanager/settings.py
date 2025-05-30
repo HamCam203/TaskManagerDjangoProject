@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'account.apps.AccountConfig',
+    'public.apps.PublicConfig',
+    'corsheaders',
     'rest_framework',
     'task',
 ]
@@ -45,6 +47,7 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'corsheaders.middleware.CorsMiddleware',  # Add CORS middleware
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -134,3 +137,9 @@ REST_FRAMEWORK = {
 }
 
 #LOGIN_REDIRECT_URL = '/'
+
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:4200",  # React app running on localhost
+    "http://127.0.0.1:4200"
+    
+    ]

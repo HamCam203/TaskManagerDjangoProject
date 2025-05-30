@@ -18,6 +18,7 @@ from django.contrib import admin
 from django.urls import include, path
 
 urlpatterns = [
+    path('', include('public.urls')),  # Include task app URLs
     path('accounts/', include('account.urls')),  # Include account app URLs
     path('admin/', admin.site.urls),
     path('api/auth/', include('rest_framework.urls')),  # Include DRF authentication URLs
