@@ -6,6 +6,7 @@ from account import views
 
 urlpatterns = [
     path('profile/', views.ProfilView.as_view(), name='profile'),
+    path('api/auth/', views.CustomAuthToken.as_view())
 ]
 
 urlpatterns = format_suffix_patterns(urlpatterns)
